@@ -1,13 +1,17 @@
 import { useEffect } from "react";
-import { useParams, Link } from "react-router-dom";
+import { useParams, Link, useNavigate } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import { projectsData, getProjectById } from "@/data/projects";
+import { useScrollAnimations } from "@/hooks/useScrollAnimations";
 
 const ProjectCase = () => {
   const { projectId } = useParams<{ projectId: string }>();
+  const navigate = useNavigate();
   const project = projectId ? getProjectById(projectId) : undefined;
+
+  useScrollAnimations();
 
   useEffect(() => {
     if (project) {
@@ -19,13 +23,25 @@ const ProjectCase = () => {
 
   if (!project) {
     return (
-      <div className="flex min-h-screen items-center justify-center bg-muted">
-        <div className="text-center">
-          <h1 className="mb-4 text-4xl font-bold">Project not found</h1>
-          <Link to="/" className="text-primary underline hover:text-primary/90">
-            Return to Home
-          </Link>
+      <div className="relative min-h-screen bg-background">
+        <Header />
+        <div className="flex min-h-[80vh] items-center justify-center bg-muted">
+          <div className="text-center max-w-md">
+            <h1 className="headline-medium mb-4">Project not found</h1>
+            <p className="body-large text-muted-foreground mb-8">
+              The project you're looking for doesn't exist or has been moved.
+            </p>
+            <div className="flex gap-4 justify-center">
+              <Button onClick={() => navigate("/")} variant="default">
+                Return to Home
+              </Button>
+              <Button onClick={() => navigate("/#work")} variant="outline">
+                View Portfolio
+              </Button>
+            </div>
+          </div>
         </div>
+        <Footer />
       </div>
     );
   }
@@ -83,7 +99,7 @@ const ProjectCase = () => {
 
       {/* Task Block */}
       {project.task && (
-        <section className="py-20 bg-muted">
+        <section className="py-20 bg-muted" data-animate="fade-up">
           <div className="section-container">
             <div className="max-w-4xl">
               <h2 className="headline-medium mb-6">Task</h2>
@@ -97,7 +113,7 @@ const ProjectCase = () => {
 
       {/* Idea Block */}
       {project.idea && (
-        <section className="py-20 bg-background">
+        <section className="py-20 bg-background" data-animate="fade-up">
           <div className="section-container">
             <div className="max-w-4xl">
               <h2 className="headline-medium mb-6">Idea</h2>
@@ -111,7 +127,7 @@ const ProjectCase = () => {
 
       {/* Solution Block */}
       {project.solution && (
-        <section className="py-20 bg-muted">
+        <section className="py-20 bg-muted" data-animate="fade-up">
           <div className="section-container">
             <div className="max-w-4xl">
               <h2 className="headline-medium mb-6">Solution</h2>
