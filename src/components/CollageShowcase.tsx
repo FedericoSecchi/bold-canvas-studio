@@ -1,0 +1,116 @@
+import heroImage1 from "@/assets/hero-collage-1.jpg";
+import heroImage2 from "@/assets/hero-collage-2.jpg";
+import heroImage3 from "@/assets/hero-collage-3.jpg";
+import portfolioHotel from "@/assets/portfolio-hotel.jpg";
+
+const CollageShowcase = () => {
+  return (
+    <section className="py-32 bg-background overflow-hidden">
+      <div className="section-container">
+        <div className="text-center mb-20" data-animate="fade-up">
+          <h2 className="headline-medium mb-4">
+            Selected moments
+            <br />
+            from our work.
+          </h2>
+          <p className="body-large text-muted-foreground max-w-xl mx-auto">
+            A snapshot of identities, websites and visual worlds.
+          </p>
+        </div>
+
+        {/* Collage Grid */}
+        <div className="relative h-[800px] md:h-[900px]" data-animate="scale">
+          {/* Large image */}
+          <div
+            className="collage-card absolute top-0 left-0 w-[60%] md:w-[45%] h-[45%] rounded-2xl overflow-hidden shadow-2xl cursor-pointer"
+            style={{ transform: "rotate(-2deg)" }}
+            data-parallax="0.1"
+          >
+            <img
+              src={heroImage1}
+              alt="Project showcase"
+              className="w-full h-full object-cover transition-transform duration-700 hover:scale-110"
+            />
+            <div className="absolute inset-0 bg-gradient-to-t from-foreground/60 via-transparent to-transparent opacity-0 hover:opacity-100 transition-opacity duration-300">
+              <div className="absolute bottom-6 left-6">
+                <span className="label-text text-background">Identity</span>
+                <h3 className="font-display text-xl font-bold text-background">
+                  Brand Vision
+                </h3>
+              </div>
+            </div>
+          </div>
+
+          {/* Medium image right */}
+          <div
+            className="collage-card absolute top-10 right-0 w-[50%] md:w-[40%] h-[35%] rounded-2xl overflow-hidden shadow-xl cursor-pointer"
+            style={{ transform: "rotate(4deg)" }}
+            data-parallax="0.15"
+          >
+            <img
+              src={heroImage2}
+              alt="Design process"
+              className="w-full h-full object-cover transition-transform duration-700 hover:scale-110"
+            />
+          </div>
+
+          {/* Small image center */}
+          <div
+            className="collage-card absolute top-[40%] left-[30%] w-[35%] md:w-[25%] h-[30%] rounded-2xl overflow-hidden shadow-xl cursor-pointer z-10"
+            style={{ transform: "rotate(-1deg)" }}
+            data-parallax="0.2"
+          >
+            <img
+              src={heroImage3}
+              alt="Website design"
+              className="w-full h-full object-cover transition-transform duration-700 hover:scale-110"
+            />
+            {/* Sticker overlay */}
+            <div className="absolute -top-4 -right-4 sticker w-16 h-16 text-xs z-20">
+              🔥
+            </div>
+          </div>
+
+          {/* Bottom left */}
+          <div
+            className="collage-card absolute bottom-20 left-10 w-[45%] md:w-[35%] h-[35%] rounded-2xl overflow-hidden shadow-xl cursor-pointer"
+            style={{ transform: "rotate(3deg)" }}
+            data-parallax="0.08"
+          >
+            <img
+              src={portfolioHotel}
+              alt="Hotel branding"
+              className="w-full h-full object-cover transition-transform duration-700 hover:scale-110"
+            />
+          </div>
+
+          {/* Bottom right decorative card */}
+          <div
+            className="absolute bottom-10 right-20 w-[30%] md:w-[20%] h-[25%] bg-primary rounded-2xl flex items-center justify-center"
+            style={{ transform: "rotate(-5deg)" }}
+          >
+            <span className="font-display text-4xl md:text-6xl font-bold text-primary-foreground">
+              ✦
+            </span>
+          </div>
+
+          {/* Floating elements */}
+          <div
+            className="absolute top-[20%] right-[30%] text-5xl animate-float"
+            style={{ animationDelay: "0.3s" }}
+          >
+            👀
+          </div>
+          <div
+            className="absolute bottom-[30%] left-[60%] text-4xl animate-float"
+            style={{ animationDelay: "0.8s" }}
+          >
+            🌟
+          </div>
+        </div>
+      </div>
+    </section>
+  );
+};
+
+export default CollageShowcase;
