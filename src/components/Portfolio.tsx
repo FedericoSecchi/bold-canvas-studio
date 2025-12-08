@@ -1,38 +1,5 @@
-import portfolioHotel from "@/assets/portfolio-hotel.jpg";
-import portfolioBakery from "@/assets/portfolio-bakery.jpg";
-import portfolioOutdoor from "@/assets/portfolio-outdoor.jpg";
-import portfolioWellness from "@/assets/portfolio-wellness.jpg";
-
-const projects = [
-  {
-    title: "Hotel Alpino",
-    type: "Identity · Website",
-    tag: "Hospitality",
-    image: portfolioHotel,
-    size: "large",
-  },
-  {
-    title: "Bakery Studio",
-    type: "Brand refresh · Visual system",
-    tag: "Food & Beverage",
-    image: portfolioBakery,
-    size: "medium",
-  },
-  {
-    title: "Outdoor Gear",
-    type: "Launch landing · Content kit",
-    tag: "Retail",
-    image: portfolioOutdoor,
-    size: "medium",
-  },
-  {
-    title: "Wellness Space",
-    type: "Webflow site · Social kit",
-    tag: "Studios",
-    image: portfolioWellness,
-    size: "large",
-  },
-];
+import { Link } from "react-router-dom";
+import { projectsData } from "@/data/projects";
 
 const Portfolio = () => {
   return (
@@ -50,10 +17,11 @@ const Portfolio = () => {
           className="grid grid-cols-1 md:grid-cols-2 gap-6"
           data-animate="stagger"
         >
-          {projects.map((project, index) => (
-            <div
-              key={project.title}
-              className={`group relative rounded-2xl overflow-hidden cursor-pointer transition-all duration-500 hover:-translate-y-2 hover:shadow-2xl ${
+          {projectsData.map((project, index) => (
+            <Link
+              key={project.id}
+              to={`/project/${project.id}`}
+              className={`group relative rounded-2xl overflow-hidden cursor-pointer transition-all duration-500 hover:-translate-y-2 hover:shadow-2xl block ${
                 project.size === "large" ? "md:row-span-2" : ""
               }`}
               style={{
@@ -102,7 +70,7 @@ const Portfolio = () => {
                   </div>
                 </div>
               </div>
-            </div>
+            </Link>
           ))}
         </div>
       </div>

@@ -1,6 +1,4 @@
-import portfolioHotel from "@/assets/portfolio-hotel.jpg";
-import portfolioBakery from "@/assets/portfolio-bakery.jpg";
-import portfolioWellness from "@/assets/portfolio-wellness.jpg";
+import { brandsData } from "@/data/brands";
 
 const Clients = () => {
   return (
@@ -8,82 +6,42 @@ const Clients = () => {
       <div className="section-container">
         <div className="text-center mb-20" data-animate="fade-up">
           <h2 className="headline-medium mb-4">
-            Brands we like
-            <br />
-            working with.
+            Brands We Work With
           </h2>
           <p className="body-large text-muted-foreground max-w-xl mx-auto">
-            From small teams and local places to boutique hotels and growing
-            studios.
+            A selection of clients, collaborators and real projects we've been involved in.
           </p>
         </div>
 
-        {/* Client collage row */}
-        <div className="relative h-[400px]" data-animate="scale">
-          {/* Image 1 */}
-          <div
-            className="absolute left-0 top-10 w-[35%] h-[70%] rounded-2xl overflow-hidden shadow-xl transition-transform duration-500 hover:-translate-y-2 hover:rotate-2"
-            style={{ transform: "rotate(-3deg)" }}
-          >
-            <img
-              src={portfolioHotel}
-              alt="Client work"
-              className="w-full h-full object-cover"
-            />
-          </div>
-
-          {/* Image 2 */}
-          <div
-            className="absolute left-[30%] top-0 w-[30%] h-[60%] rounded-2xl overflow-hidden shadow-xl transition-transform duration-500 hover:-translate-y-2"
-            style={{ transform: "rotate(2deg)" }}
-          >
-            <img
-              src={portfolioBakery}
-              alt="Client work"
-              className="w-full h-full object-cover"
-            />
-          </div>
-
-          {/* Image 3 */}
-          <div
-            className="absolute right-10 top-20 w-[30%] h-[65%] rounded-2xl overflow-hidden shadow-xl transition-transform duration-500 hover:-translate-y-2 hover:-rotate-2"
-            style={{ transform: "rotate(4deg)" }}
-          >
-            <img
-              src={portfolioWellness}
-              alt="Client work"
-              className="w-full h-full object-cover"
-            />
-          </div>
-
-          {/* Decorative elements */}
-          <div className="absolute bottom-10 left-[50%] transform -translate-x-1/2">
-            <div className="flex items-center gap-8">
-              {["Hotels", "Studios", "Brands", "Shops"].map((label, i) => (
-                <span
-                  key={label}
-                  className="font-display text-lg font-semibold text-muted-foreground/50"
-                  style={{ animationDelay: `${i * 0.2}s` }}
-                >
-                  {label}
-                </span>
-              ))}
+        {/* Brands Grid */}
+        <div
+          className="grid grid-cols-2 md:grid-cols-4 gap-8 md:gap-12 max-w-5xl mx-auto"
+          data-animate="stagger"
+        >
+          {brandsData.map((brand, index) => (
+            <div
+              key={brand.name}
+              className="group flex flex-col items-center justify-center p-6 transition-all duration-300 hover:opacity-100 opacity-70"
+              style={{ animationDelay: `${index * 0.1}s` }}
+            >
+              {brand.logo ? (
+                <img
+                  src={brand.logo}
+                  alt={brand.name}
+                  className="h-12 md:h-16 w-auto object-contain transition-transform duration-300 group-hover:scale-105"
+                />
+              ) : (
+                <div className="text-center">
+                  <h3 className="font-display text-lg md:text-xl font-semibold mb-2 group-hover:text-primary transition-colors">
+                    {brand.name}
+                  </h3>
+                  <span className="label-text text-muted-foreground text-xs">
+                    {brand.category}
+                  </span>
+                </div>
+              )}
             </div>
-          </div>
-
-          {/* Floating stickers */}
-          <div
-            className="absolute top-0 right-[40%] text-4xl animate-float"
-            style={{ animationDelay: "0.2s" }}
-          >
-            💼
-          </div>
-          <div
-            className="absolute bottom-20 right-[20%] text-3xl animate-float"
-            style={{ animationDelay: "0.6s" }}
-          >
-            ⭐
-          </div>
+          ))}
         </div>
       </div>
     </section>
