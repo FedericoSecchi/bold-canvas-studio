@@ -1,12 +1,42 @@
-// Update this page (the content is just a fallback if you fail to update the page)
+import { useEffect } from "react";
+import Header from "@/components/Header";
+import Hero from "@/components/Hero";
+import Storytelling from "@/components/Storytelling";
+import Marquee from "@/components/Marquee";
+import CollageShowcase from "@/components/CollageShowcase";
+import Portfolio from "@/components/Portfolio";
+import Capabilities from "@/components/Capabilities";
+import Ethos from "@/components/Ethos";
+import Clients from "@/components/Clients";
+import ContactCTA from "@/components/ContactCTA";
+import Footer from "@/components/Footer";
+import { useSmoothScroll } from "@/hooks/useSmoothScroll";
+import { useScrollAnimations } from "@/hooks/useScrollAnimations";
 
 const Index = () => {
+  useSmoothScroll();
+  useScrollAnimations();
+
+  useEffect(() => {
+    // Update page title
+    document.title = "Creative Studio — Branding, Websites & Experiences";
+  }, []);
+
   return (
-    <div className="flex min-h-screen items-center justify-center bg-background">
-      <div className="text-center">
-        <h1 className="mb-4 text-4xl font-bold">Welcome to Your Blank App</h1>
-        <p className="text-xl text-muted-foreground">Start building your amazing project here!</p>
-      </div>
+    <div className="relative">
+      <Header />
+      <main>
+        <Hero />
+        <Storytelling />
+        <Marquee />
+        <CollageShowcase />
+        <Portfolio />
+        <Capabilities />
+        <Ethos />
+        <Clients />
+        <ContactCTA />
+      </main>
+      <Footer />
     </div>
   );
 };
