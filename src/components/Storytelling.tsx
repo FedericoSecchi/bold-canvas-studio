@@ -1,4 +1,3 @@
-import { useMemo } from "react";
 import ScrollFloatText from "./ScrollFloatText";
 
 const mainLine =
@@ -7,27 +6,15 @@ const mainLine =
 const sideCopy = "A studio driven by clarity, bold ideas, and design that actually works.";
 
 const Storytelling = () => {
-  const words = useMemo(
-    () =>
-      mainLine.split(" ").map((word) => {
-        const clean = word.replace(/[^a-zA-Z’“”]/g, "").toLowerCase();
-        const highlightTargets = ["spark", "emotion", "identity", "this", "is", "it"];
-        const isHighlight = highlightTargets.includes(clean);
-        return { word, isHighlight };
-      }),
-    [],
-  );
-
   return (
     <section className="about-section min-h-[90vh] relative bg-background px-[6vw]">
       <div className="about-main-wrapper">
         <div className="about-main centered-text w-full max-w-[900px] mx-auto space-y-4">
           <ScrollFloatText
+            text={mainLine}
             containerClassName="about-line"
             textClassName="font-display font-extrabold leading-[0.95] tracking-[-0.02em]"
-          >
-            {mainLine}
-          </ScrollFloatText>
+          />
         </div>
       </div>
 
