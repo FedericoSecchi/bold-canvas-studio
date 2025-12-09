@@ -185,17 +185,6 @@
     display: block;
   }
 
-  .about-float-text {
-    display: inline-block;
-    width: 100%;
-    text-align: center;
-    line-height: 0.95;
-  }
-
-  .about-float-char {
-    display: inline-block;
-    will-change: transform;
-  }
 
   .about-section .word {
     display: inline-block;
