@@ -2,8 +2,7 @@ import { useEffect, useRef } from "react";
 import gsap from "gsap";
 
 const mainLines = [
-  "We craft brands and digital experiences built to spark emotion,",
-  "sharpen identity, and make people feel “this is it.”",
+  "We craft brands and digital experiences built to spark emotion, sharpen identity, and make people feel “this is it.”",
 ];
 
 const sideCopy = "A studio driven by clarity, bold ideas, and design that actually works.";
@@ -14,20 +13,20 @@ const Storytelling = () => {
 
   useEffect(() => {
     const ctx = gsap.context(() => {
-      gsap.from(mainLinesRef.current?.children || [], {
+      gsap.from(".about-line", {
         opacity: 0,
-        y: 35,
+        y: 40,
         duration: 1.1,
         ease: "power3.out",
-        stagger: 0.15,
+        stagger: 0.18,
       });
 
       if (sideNoteRef.current) {
         gsap.from(sideNoteRef.current, {
           opacity: 0,
-          y: 20,
-          duration: 0.9,
-          delay: 0.2,
+          y: 24,
+          duration: 1,
+          delay: 0.25,
           ease: "power2.out",
         });
       }
@@ -37,21 +36,24 @@ const Storytelling = () => {
   }, []);
 
   return (
-    <section className="about-container min-h-[90vh] flex items-center justify-center relative bg-background">
-      <div className="about-main w-[80%] max-w-[900px] mx-auto space-y-3 text-left">
+    <section className="about-section min-h-[90vh] flex items-center justify-center relative bg-background px-[6vw]">
+      <div
+        ref={mainLinesRef}
+        className="about-main w-[80%] max-w-[900px] mx-auto text-left space-y-4"
+      >
         {mainLines.map((line) => (
-          <div
+          <span
             key={line}
-            className="about-line font-display font-extrabold text-4xl md:text-6xl lg:text-7xl leading-[0.95] tracking-tight"
+            className="about-line font-display font-extrabold leading-[0.95] tracking-[-0.02em]"
           >
             {line}
-          </div>
+          </span>
         ))}
       </div>
 
       <div
         ref={sideNoteRef}
-        className="about-note text-muted-foreground text-sm md:text-base tracking-[0.06em] leading-[1.3] max-w-[250px]"
+        className="about-note text-muted-foreground"
       >
         {sideCopy}
       </div>
