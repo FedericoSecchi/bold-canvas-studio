@@ -10,11 +10,9 @@ import Ethos from "@/components/Ethos";
 import Clients from "@/components/Clients";
 import ContactCTA from "@/components/ContactCTA";
 import Footer from "@/components/Footer";
-import { useSmoothScroll } from "@/hooks/useSmoothScroll";
 import { useScrollAnimations } from "@/hooks/useScrollAnimations";
 
 const Index = () => {
-  useSmoothScroll();
   useScrollAnimations();
 
   useEffect(() => {

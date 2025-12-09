@@ -53,6 +53,12 @@
     --sidebar-accent-foreground: 240 5.9% 10%;
     --sidebar-border: 220 13% 91%;
     --sidebar-ring: 217.2 91.2% 59.8%;
+
+    /* About section offsets */
+    --about-main-offset-x: 0px;
+    --about-main-offset-y: 0px;
+    --about-side-offset-x: 0px;
+    --about-side-offset-y: 0px;
   }
 
   .dark {
@@ -79,10 +85,6 @@
 @layer base {
   * {
     @apply border-border;
-  }
-
-  html {
-    scroll-behavior: smooth;
   }
 
   body {
@@ -135,6 +137,22 @@
   .sticker {
     @apply inline-flex items-center justify-center rounded-full bg-primary text-primary-foreground font-display font-bold;
     animation: sticker-bounce 3s ease-in-out infinite;
+  }
+
+  /* About section positioning helpers */
+  .about-wrapper {
+    --about-main-offset-x: var(--about-main-offset-x, 0px);
+    --about-main-offset-y: var(--about-main-offset-y, 0px);
+    --about-side-offset-x: var(--about-side-offset-x, 0px);
+    --about-side-offset-y: var(--about-side-offset-y, 0px);
+  }
+
+  .about-main {
+    transform: translate(var(--about-main-offset-x), var(--about-main-offset-y));
+  }
+
+  .about-side {
+    transform: translate(var(--about-side-offset-x), var(--about-side-offset-y));
   }
 
   /* Button magnetic effect container */
