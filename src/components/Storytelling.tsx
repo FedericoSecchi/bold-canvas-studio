@@ -22,25 +22,18 @@ const Storytelling = () => {
     <section className="about-section min-h-[90vh] relative bg-background px-[6vw]">
       <div className="about-main-wrapper">
         <div className="about-main centered-text w-full max-w-[900px] mx-auto space-y-4">
-          <AnimatedDecryptText
-            text={mainLine}
-            animateOn="load"
-            parentClassName="about-line font-display font-extrabold leading-[0.95] tracking-[-0.02em] flex flex-wrap justify-center gap-2"
-            renderContent={(displayText) => {
-              const parts = displayText.split(" ");
-              return parts.map((word, idx) => {
-                const isHighlight = words[idx]?.isHighlight ?? false;
-                return (
-                  <span
-                    key={`${word}-${idx}`}
-                    className={`word ${isHighlight ? "highlight-brush" : ""}`}
-                  >
-                    {word}
-                  </span>
-                );
-              });
-            }}
-          />
+          <ScrollFloatText>
+            <span className="about-line font-display font-extrabold leading-[0.95] tracking-[-0.02em] flex flex-wrap justify-center gap-2">
+              {words.map(({ word, isHighlight }, idx) => (
+                <span
+                  key={`${word}-${idx}`}
+                  className={`word ${isHighlight ? "highlight-brush" : ""}`}
+                >
+                  {word}
+                </span>
+              ))}
+            </span>
+          </ScrollFloatText>
         </div>
       </div>
 
