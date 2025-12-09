@@ -13,19 +13,6 @@
   line-height: 1;
 }
 
-.sf-word {
-  display: inline-block;
-  white-space: nowrap;
-}
-
-/* ScrollFloatWords base classes */
-.scroll-float {
-  width: 100%;
-  display: block;
-  overflow: hidden;
-}
-
-.scroll-float-inner {
-  width: 100%;
+.char {
   display: inline-block;
 }
