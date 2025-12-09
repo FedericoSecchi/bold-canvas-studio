@@ -1,4 +1,4 @@
-import ScrollFloatText from "./ScrollFloatText";
+import { AboutScrollFloat } from "./AboutScrollFloat";
 
 const mainLine =
   "We craft brands and digital experiences built to spark emotion, sharpen identity, and make people feel “this is it.”";
@@ -10,11 +10,7 @@ const Storytelling = () => {
     <section className="about-section min-h-[90vh] relative bg-background px-[6vw]">
       <div className="about-main-wrapper">
         <div className="about-main centered-text w-full max-w-[900px] mx-auto space-y-4">
-          <ScrollFloatText
-            text={mainLine}
-            containerClassName="about-line"
-            textClassName="font-display font-extrabold leading-[0.95] tracking-[-0.02em]"
-          />
+          <AboutScrollFloat text={mainLine} className="font-display font-extrabold leading-[0.95] tracking-[-0.02em]" />
         </div>
       </div>
 

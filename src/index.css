@@ -1,5 +1,4 @@
 @import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=Syne:wght@400;500;600;700;800&display=swap');
-@import "./styles/scroll-float.css";
 
 @tailwind base;
 @tailwind components;
@@ -184,6 +183,18 @@
 
   .about-line {
     display: block;
+  }
+
+  .about-float-text {
+    display: inline-block;
+    width: 100%;
+    text-align: center;
+    line-height: 0.95;
+  }
+
+  .about-float-char {
+    display: inline-block;
+    will-change: transform;
   }
 
   .about-section .word {
