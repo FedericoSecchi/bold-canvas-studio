@@ -139,20 +139,32 @@
     animation: sticker-bounce 3s ease-in-out infinite;
   }
 
-  /* About section positioning helpers */
-  .about-wrapper {
-    --about-main-offset-x: var(--about-main-offset-x, 0px);
-    --about-main-offset-y: var(--about-main-offset-y, 0px);
-    --about-side-offset-x: var(--about-side-offset-x, 0px);
-    --about-side-offset-y: var(--about-side-offset-y, 0px);
+  /* About section positioning */
+  .about-container {
+    --about-note-offset-x: 0px;
+    --about-note-offset-y: 0px;
   }
 
   .about-main {
-    transform: translate(var(--about-main-offset-x), var(--about-main-offset-y));
+    transform: translate(var(--about-main-offset-x, 0px), var(--about-main-offset-y, 0px));
   }
 
-  .about-side {
-    transform: translate(var(--about-side-offset-x), var(--about-side-offset-y));
+  .about-note {
+    position: absolute;
+    bottom: 40px;
+    right: 40px;
+    width: 20%;
+    max-width: 250px;
+    transform: translate(var(--about-note-offset-x), var(--about-note-offset-y));
+  }
+
+  @media (max-width: 767px) {
+    .about-note {
+      position: static;
+      width: 100%;
+      max-width: none;
+      margin-top: 1.5rem;
+    }
   }
 
   /* Button magnetic effect container */
