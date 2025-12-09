@@ -1,29 +1,8 @@
-import React from "react";
+// Este archivo será reemplazado con el código real del componente ScrollFloatWords.
+// Cursor debe esperar al JS que proporcionará el usuario.
 
-interface ScrollFloatWordsProps {
-  text: string;
-  containerClassName?: string;
-  textClassName?: string;
-  scrollContainerRef?: React.RefObject<HTMLElement>;
-  animationDuration?: number;
-  ease?: string;
-  scrollStart?: string;
-  scrollEnd?: string;
-  stagger?: number;
-}
-
-const ScrollFloatWords = ({
-  text,
-  containerClassName = "",
-  textClassName = "",
-}: ScrollFloatWordsProps) => {
-  // Temporary safe fallback component
-  // Waiting for final animation code from user
+export default function ScrollFloatWords({ text = "", className = "" }) {
   return (
-    <div className={`scroll-float ${containerClassName}`}>
-      <span className={`scroll-float-text ${textClassName}`}>{text}</span>
-    </div>
+    <div className={`scroll-float ${className}`}> {text} </div>
   );
-};
-
-export default ScrollFloatWords;
+}

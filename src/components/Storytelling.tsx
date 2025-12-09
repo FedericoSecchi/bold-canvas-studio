@@ -12,8 +12,7 @@ const Storytelling = () => {
         <div className="about-main centered-text w-full max-w-[900px] mx-auto space-y-4">
           <ScrollFloatWords
             text={mainLine}
-            containerClassName="about-line"
-            textClassName="font-display font-extrabold leading-[0.95] tracking-[-0.02em]"
+            className="about-line font-display font-extrabold leading-[0.95] tracking-[-0.02em]"
           />
         </div>
       </div>
