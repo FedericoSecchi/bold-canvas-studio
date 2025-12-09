@@ -22,17 +22,11 @@ const Storytelling = () => {
     <section className="about-section min-h-[90vh] relative bg-background px-[6vw]">
       <div className="about-main-wrapper">
         <div className="about-main centered-text w-full max-w-[900px] mx-auto space-y-4">
-          <ScrollFloatText>
-            <span className="about-line font-display font-extrabold leading-[0.95] tracking-[-0.02em] flex flex-wrap justify-center gap-2">
-              {words.map(({ word, isHighlight }, idx) => (
-                <span
-                  key={`${word}-${idx}`}
-                  className={`word ${isHighlight ? "highlight-brush" : ""}`}
-                >
-                  {word}
-                </span>
-              ))}
-            </span>
+          <ScrollFloatText
+            containerClassName="about-line"
+            textClassName="font-display font-extrabold leading-[0.95] tracking-[-0.02em]"
+          >
+            {mainLine}
           </ScrollFloatText>
         </div>
       </div>
