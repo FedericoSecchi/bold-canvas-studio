@@ -4,6 +4,7 @@ import gsap from "gsap";
 import heroImage1 from "@/assets/hero-collage-1.jpg";
 import heroImage2 from "@/assets/hero-collage-2.jpg";
 import heroImage3 from "@/assets/hero-collage-3.jpg";
+import { scrollToSection } from "@/utils/scroll";
 
 const changingWords = ["brands", "websites", "experiences"];
 
@@ -109,10 +110,18 @@ const Hero = () => {
             </p>
 
             <div className="flex flex-wrap gap-4">
-              <Button variant="hero" size="xl">
+              <Button
+                variant="hero"
+                size="xl"
+                onClick={() => scrollToSection("#contact")}
+              >
                 Start a project
               </Button>
-              <Button variant="heroOutline" size="xl">
+              <Button
+                variant="heroOutline"
+                size="xl"
+                onClick={() => scrollToSection("#work")}
+              >
                 See our work
               </Button>
             </div>

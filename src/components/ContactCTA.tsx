@@ -1,6 +1,14 @@
 import { Button } from "@/components/ui/button";
 
 const ContactCTA = () => {
+  const handleWriteUs = () => {
+    window.location.href = "mailto:hello@boldcanvas.studio?subject=New Project Inquiry";
+  };
+
+  const handleStartBrief = () => {
+    window.open("https://placeholder.google.form", "_blank");
+  };
+
   return (
     <section id="contact" className="py-32 bg-secondary text-secondary-foreground relative overflow-hidden">
       <div className="section-container relative z-10">
@@ -17,13 +25,14 @@ const ContactCTA = () => {
           </p>
 
           <div className="flex flex-col sm:flex-row gap-4 justify-center mb-12">
-            <Button variant="neon" size="xl">
+            <Button variant="neon" size="xl" onClick={handleWriteUs}>
               Write us
             </Button>
             <Button
               variant="heroOutline"
               size="xl"
               className="border-secondary-foreground/30 text-secondary-foreground hover:bg-secondary-foreground hover:text-secondary"
+              onClick={handleStartBrief}
             >
               Start your brief
             </Button>

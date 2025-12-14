@@ -1,7 +1,16 @@
+import { Link } from "react-router-dom";
 import heroImage1 from "@/assets/hero-collage-1.jpg";
 import heroImage2 from "@/assets/hero-collage-2.jpg";
 import heroImage3 from "@/assets/hero-collage-3.jpg";
 import portfolioHotel from "@/assets/portfolio-hotel.jpg";
+
+// Mapping collage images to project IDs
+const collageProjectMap = {
+  [heroImage1]: "hotel-alpino", // Brand Vision -> Hotel Alpino
+  [heroImage2]: "bakery-studio", // Design process -> Bakery Studio
+  [heroImage3]: "wellness-space", // Website design -> Wellness Space
+  [portfolioHotel]: "hotel-alpino", // Hotel branding -> Hotel Alpino
+};
 
 const CollageShowcase = () => {
   return (
@@ -21,8 +30,9 @@ const CollageShowcase = () => {
         {/* Collage Grid */}
         <div className="relative h-[800px] md:h-[900px]" data-animate="scale">
           {/* Large image */}
-          <div
-            className="collage-card absolute top-0 left-0 w-[60%] md:w-[45%] h-[45%] rounded-2xl overflow-hidden shadow-2xl cursor-pointer"
+          <Link
+            to={`/project/${collageProjectMap[heroImage1]}`}
+            className="collage-card absolute top-0 left-0 w-[60%] md:w-[45%] h-[45%] rounded-2xl overflow-hidden shadow-2xl cursor-pointer block"
             style={{ transform: "rotate(-2deg)" }}
             data-parallax="0.1"
           >
@@ -39,11 +49,12 @@ const CollageShowcase = () => {
                 </h3>
               </div>
             </div>
-          </div>
+          </Link>
 
           {/* Medium image right */}
-          <div
-            className="collage-card absolute top-10 right-0 w-[50%] md:w-[40%] h-[35%] rounded-2xl overflow-hidden shadow-xl cursor-pointer"
+          <Link
+            to={`/project/${collageProjectMap[heroImage2]}`}
+            className="collage-card absolute top-10 right-0 w-[50%] md:w-[40%] h-[35%] rounded-2xl overflow-hidden shadow-xl cursor-pointer block"
             style={{ transform: "rotate(4deg)" }}
             data-parallax="0.15"
           >
@@ -52,11 +63,12 @@ const CollageShowcase = () => {
               alt="Design process"
               className="w-full h-full object-cover transition-transform duration-700 hover:scale-110"
             />
-          </div>
+          </Link>
 
           {/* Small image center */}
-          <div
-            className="collage-card absolute top-[40%] left-[30%] w-[35%] md:w-[25%] h-[30%] rounded-2xl overflow-hidden shadow-xl cursor-pointer z-10"
+          <Link
+            to={`/project/${collageProjectMap[heroImage3]}`}
+            className="collage-card absolute top-[40%] left-[30%] w-[35%] md:w-[25%] h-[30%] rounded-2xl overflow-hidden shadow-xl cursor-pointer z-10 block"
             style={{ transform: "rotate(-1deg)" }}
             data-parallax="0.2"
           >
@@ -69,11 +81,12 @@ const CollageShowcase = () => {
             <div className="absolute -top-4 -right-4 sticker w-16 h-16 text-xs z-20">
               🔥
             </div>
-          </div>
+          </Link>
 
           {/* Bottom left */}
-          <div
-            className="collage-card absolute bottom-20 left-10 w-[45%] md:w-[35%] h-[35%] rounded-2xl overflow-hidden shadow-xl cursor-pointer"
+          <Link
+            to={`/project/${collageProjectMap[portfolioHotel]}`}
+            className="collage-card absolute bottom-20 left-10 w-[45%] md:w-[35%] h-[35%] rounded-2xl overflow-hidden shadow-xl cursor-pointer block"
             style={{ transform: "rotate(3deg)" }}
             data-parallax="0.08"
           >
@@ -82,7 +95,7 @@ const CollageShowcase = () => {
               alt="Hotel branding"
               className="w-full h-full object-cover transition-transform duration-700 hover:scale-110"
             />
-          </div>
+          </Link>
 
           {/* Bottom right decorative card */}
           <div

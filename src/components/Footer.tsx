@@ -1,15 +1,26 @@
+import { Link } from "react-router-dom";
+import { scrollToTop, scrollToSection } from "@/utils/scroll";
+
 const footerLinks = ["Home", "Work", "Capabilities", "Contact"];
 
 const Footer = () => {
+  const handleNavClick = (link: string) => {
+    if (link.toLowerCase() === "home") {
+      scrollToTop();
+    } else {
+      scrollToSection(`#${link.toLowerCase()}`);
+    }
+  };
+
   return (
     <footer className="bg-foreground text-background py-20">
       <div className="section-container">
         <div className="grid md:grid-cols-3 gap-12 mb-16">
           {/* Brand */}
           <div>
-            <span className="font-display text-3xl font-bold mb-6 block">
+            <Link to="/" className="font-display text-3xl font-bold mb-6 block">
               studio<span className="text-primary">.</span>
-            </span>
+            </Link>
             <p className="body-regular text-background/60 mb-6 max-w-xs">
               Creative Studio — branding, websites and visual content.
             </p>
@@ -28,13 +39,13 @@ const Footer = () => {
             </span>
             <nav className="space-y-3">
               {footerLinks.map((link) => (
-                <a
+                <button
                   key={link}
-                  href={`#${link.toLowerCase()}`}
-                  className="block font-body text-background/80 hover:text-primary transition-colors"
+                  onClick={() => handleNavClick(link)}
+                  className="block w-full text-left font-body text-background/80 hover:text-primary transition-colors"
                 >
                   {link}
-                </a>
+                </button>
               ))}
             </nav>
           </div>
