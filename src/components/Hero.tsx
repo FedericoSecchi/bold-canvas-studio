@@ -109,26 +109,31 @@ const Hero = () => {
               what they sell.
             </p>
 
-            <div className="flex flex-wrap gap-4">
-              <Button
-                variant="hero"
-                size="xl"
-                onClick={() => scrollToSection("#contact")}
-              >
-                Start a project
-              </Button>
-              <Button
-                variant="heroOutline"
-                size="xl"
-                onClick={() => scrollToSection("#work")}
-              >
-                See our work
-              </Button>
-            </div>
-
-            {/* Sticker - Only visible on XL screens to prevent overlap with CTA buttons */}
-            <div className="hidden xl:block absolute -bottom-10 right-0 lg:right-20 sticker w-24 h-24 text-sm">
-              ✦ New
+            {/* CTA Buttons Container - Clean layout with proper spacing */}
+            <div className="relative">
+              <div className="flex flex-wrap gap-4">
+                <Button
+                  variant="hero"
+                  size="xl"
+                  onClick={() => scrollToSection("#contact")}
+                >
+                  Start a project
+                </Button>
+                <Button
+                  variant="heroOutline"
+                  size="xl"
+                  onClick={() => scrollToSection("#work")}
+                >
+                  See our work
+                </Button>
+              </div>
+              
+              {/* Badge positioned outside button flow - only on large screens */}
+              <div className="hidden xl:flex absolute -right-8 top-1/2 -translate-y-1/2 items-center justify-center">
+                <div className="sticker w-20 h-20 text-xs">
+                  ✦ New
+                </div>
+              </div>
             </div>
           </div>
 
