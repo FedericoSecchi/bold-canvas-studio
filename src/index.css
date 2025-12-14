@@ -218,13 +218,6 @@ html {
     pointer-events: none;
   }
 
-  /* Removed encrypted/reset as DecryptedText was cleaned */
-
-  .centered-text {
-    text-align: center;
-    margin-left: auto;
-    margin-right: auto;
-  }
 
   @media (max-width: 1024px) {
     .about-note {

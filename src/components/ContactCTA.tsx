@@ -40,10 +40,10 @@ const ContactCTA = () => {
           </div>
 
           <a
-            href="mailto:hello@studio.com"
+            href="mailto:hello@boldcanvas.studio"
             className="inline-flex items-center gap-2 font-display text-xl font-semibold text-primary hover:underline"
           >
-            hello@studio.com
+            hello@boldcanvas.studio
             <svg
               className="w-5 h-5"
               fill="none"

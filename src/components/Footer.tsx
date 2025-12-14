@@ -25,10 +25,10 @@ const Footer = () => {
               Creative Studio — branding, websites and visual content.
             </p>
             <a
-              href="mailto:hello@studio.com"
+              href="mailto:hello@boldcanvas.studio"
               className="font-display font-semibold text-primary hover:underline"
             >
-              hello@studio.com
+              hello@boldcanvas.studio
             </a>
           </div>
 
@@ -59,7 +59,7 @@ const Footer = () => {
               Designers, developers, photographers — send us your portfolio.
             </p>
             <a
-              href="mailto:hello@studio.com"
+              href="mailto:hello@boldcanvas.studio"
               className="inline-flex items-center gap-2 bg-primary text-primary-foreground px-5 py-2.5 rounded-full font-body font-medium text-sm hover:scale-105 transition-transform"
             >
               Get in touch
