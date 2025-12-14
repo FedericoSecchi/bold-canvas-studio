@@ -48,8 +48,12 @@ const Ethos = () => {
 
             {/* Decorative sticker */}
             <button
-              onClick={() => scrollToSection("#contact")}
+              onClick={(e) => {
+                e.preventDefault();
+                scrollToSection("#contact");
+              }}
               className="mt-12 inline-flex items-center gap-3 bg-secondary text-secondary-foreground px-6 py-4 rounded-full cursor-pointer hover:opacity-90 transition-opacity"
+              type="button"
             >
               <span className="text-2xl">😌</span>
               <span className="font-body font-medium">

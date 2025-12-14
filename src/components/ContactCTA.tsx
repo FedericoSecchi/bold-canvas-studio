@@ -31,8 +31,9 @@ const ContactCTA = () => {
             <Button
               variant="heroOutline"
               size="xl"
-              className="border-secondary-foreground/30 text-secondary-foreground hover:bg-secondary-foreground hover:text-secondary"
+              className="border-secondary-foreground/30 text-secondary-foreground hover:bg-secondary-foreground hover:text-secondary opacity-50 cursor-not-allowed"
               onClick={handleStartBrief}
+              disabled
             >
               Start your brief
             </Button>

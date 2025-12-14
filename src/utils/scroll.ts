@@ -2,10 +2,30 @@
  * Smooth scroll to a section by ID
  */
 export const scrollToSection = (sectionId: string) => {
-  const element = document.querySelector(sectionId);
-  if (element) {
-    element.scrollIntoView({ behavior: 'smooth', block: 'start' });
+  const scrollToElement = () => {
+    const element = document.querySelector(sectionId);
+    if (element) {
+      const yOffset = -80; // Offset for fixed header
+      const y = element.getBoundingClientRect().top + window.pageYOffset + yOffset;
+      window.scrollTo({ top: y, behavior: 'smooth' });
+      // Update URL hash
+      window.history.pushState(null, '', sectionId);
+      return true;
+    }
+    return false;
+  };
+
+  // Try immediately
+  if (scrollToElement()) {
+    return;
   }
+
+  // If not found, wait a bit for React to render
+  setTimeout(() => {
+    if (!scrollToElement()) {
+      console.warn(`Element with id "${sectionId}" not found`);
+    }
+  }, 100);
 };
 
 /**
