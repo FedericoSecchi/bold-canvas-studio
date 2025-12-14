@@ -1,3 +1,5 @@
+import { scrollToSection } from "@/utils/scroll";
+
 const bullets = [
   "Design with intention, not just decoration.",
   "Use motion and interaction only when it supports the message.",
@@ -45,12 +47,15 @@ const Ethos = () => {
             </div>
 
             {/* Decorative sticker */}
-            <div className="mt-12 inline-flex items-center gap-3 bg-secondary text-secondary-foreground px-6 py-4 rounded-full">
+            <button
+              onClick={() => scrollToSection("#contact")}
+              className="mt-12 inline-flex items-center gap-3 bg-secondary text-secondary-foreground px-6 py-4 rounded-full cursor-pointer hover:opacity-90 transition-opacity"
+            >
               <span className="text-2xl">😌</span>
               <span className="font-body font-medium">
                 Less drama, more shipping
               </span>
-            </div>
+            </button>
           </div>
         </div>
       </div>
