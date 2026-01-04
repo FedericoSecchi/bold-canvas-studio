@@ -74,8 +74,8 @@ const Hero = () => {
   const headlineText = "We design";
 
   return (
-    <section className="relative min-h-screen bg-background pt-32 pb-20 overflow-hidden">
-      <div className="section-container">
+    <section className="relative min-h-screen bg-background overflow-hidden flex items-center">
+      <div className="section-container w-full pt-20 pb-20">
         <div className="grid lg:grid-cols-2 gap-12 lg:gap-20 items-center">
           {/* Left: Text content */}
           <div className="relative z-10">

@@ -13,6 +13,7 @@ const ContactCTA = () => {
     <section id="contact" className="py-32 bg-secondary text-secondary-foreground relative overflow-hidden">
       <div className="section-container relative z-10">
         <div className="max-w-4xl mx-auto text-center" data-animate="fade-up">
+          <span className="label-text text-primary mb-4 block">CONTACT</span>
           <h2 className="headline-large mb-6">
             Bored of
             <br />

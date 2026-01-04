@@ -99,7 +99,7 @@ const ProjectCase = () => {
 
       {/* Task Block */}
       {project.task && (
-        <section className="py-20 bg-muted" data-animate="fade-up">
+        <section className="py-20 bg-background" data-animate="fade-up">
           <div className="section-container">
             <div className="max-w-4xl">
               <h2 className="headline-medium mb-6">Task</h2>
@@ -107,6 +107,9 @@ const ProjectCase = () => {
                 {project.task}
               </p>
             </div>
+          </div>
+          <div className="section-container">
+            <hr className="border-t border-border/30 mt-20" />
           </div>
         </section>
       )}
@@ -122,12 +125,15 @@ const ProjectCase = () => {
               </p>
             </div>
           </div>
+          <div className="section-container">
+            <hr className="border-t border-border/30 mt-20" />
+          </div>
         </section>
       )}
 
       {/* Solution Block */}
       {project.solution && (
-        <section className="py-20 bg-muted" data-animate="fade-up">
+        <section className="py-20 bg-background" data-animate="fade-up">
           <div className="section-container">
             <div className="max-w-4xl">
               <h2 className="headline-medium mb-6">Solution</h2>
@@ -136,24 +142,50 @@ const ProjectCase = () => {
               </p>
             </div>
           </div>
+          <div className="section-container">
+            <hr className="border-t border-border/30 mt-20" />
+          </div>
         </section>
       )}
 
       {/* Visual Gallery Block */}
       <section className="py-20 bg-background">
         <div className="section-container">
-          <div className="grid md:grid-cols-2 gap-6">
-            <div className="relative h-[400px] rounded-2xl overflow-hidden">
+          {/* 1 large image */}
+          <div className="mb-6">
+            <div className="relative w-full h-[500px] md:h-[600px] rounded-2xl overflow-hidden">
               <img
                 src={project.image}
                 alt={`${project.title} - Detail 1`}
                 className="w-full h-full object-cover"
               />
             </div>
+          </div>
+          
+          {/* 2 small images side by side */}
+          <div className="grid md:grid-cols-2 gap-6 mb-6">
             <div className="relative h-[400px] rounded-2xl overflow-hidden">
               <img
                 src={project.image}
                 alt={`${project.title} - Detail 2`}
+                className="w-full h-full object-cover"
+              />
+            </div>
+            <div className="relative h-[400px] rounded-2xl overflow-hidden">
+              <img
+                src={project.image}
+                alt={`${project.title} - Detail 3`}
+                className="w-full h-full object-cover"
+              />
+            </div>
+          </div>
+          
+          {/* 1 large image */}
+          <div>
+            <div className="relative w-full h-[500px] md:h-[600px] rounded-2xl overflow-hidden">
+              <img
+                src={project.image}
+                alt={`${project.title} - Detail 4`}
                 className="w-full h-full object-cover"
               />
             </div>

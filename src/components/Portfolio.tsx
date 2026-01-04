@@ -6,9 +6,10 @@ const Portfolio = () => {
     <section id="work" className="py-32 bg-secondary text-secondary-foreground">
       <div className="section-container">
         <div className="mb-16" data-animate="fade-up">
+          <span className="label-text text-primary mb-4 block">WORK</span>
           <h2 className="headline-medium mb-4">Selected projects</h2>
           <p className="body-large text-secondary-foreground/60">
-            Different industries, same obsession with detail.
+            Different industries. Same obsession for clarity.
           </p>
         </div>
 

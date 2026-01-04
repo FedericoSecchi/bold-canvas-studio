@@ -13,6 +13,7 @@ const Ethos = () => {
         <div className="grid lg:grid-cols-2 gap-16 items-center">
           {/* Left: Main statement */}
           <div data-animate="fade-up">
+            <span className="label-text text-primary mb-4 block">ABOUT</span>
             <h2 className="headline-medium mb-8">
               Talk is cheap.
               <br />

@@ -3,12 +3,18 @@ import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import MobileMenu from "@/components/MobileMenu";
 import { scrollToSection, scrollToTop } from "@/utils/scroll";
+import { useI18n } from "@/i18n/context";
 
 const Header = () => {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+  const { language, setLanguage } = useI18n();
 
   const handleStartProject = () => {
     scrollToSection("#contact");
+  };
+
+  const toggleLanguage = () => {
+    setLanguage(language === 'en' ? 'es' : 'en');
   };
 
   return (
@@ -35,15 +41,23 @@ const Header = () => {
             ))}
           </nav>
 
-          {/* CTA */}
-          <Button
-            variant="neon"
-            size="sm"
-            className="hidden md:inline-flex"
-            onClick={handleStartProject}
-          >
-            Start a project
-          </Button>
+          {/* Language Toggle & CTA */}
+          <div className="hidden md:flex items-center gap-4">
+            <button
+              onClick={toggleLanguage}
+              className="text-sm font-medium text-secondary-foreground/80 hover:text-secondary-foreground transition-colors uppercase"
+              aria-label={`Switch to ${language === 'en' ? 'Spanish' : 'English'}`}
+            >
+              {language === 'en' ? 'ES' : 'EN'}
+            </button>
+            <Button
+              variant="neon"
+              size="sm"
+              onClick={handleStartProject}
+            >
+              Start a project
+            </Button>
+          </div>
 
           {/* Mobile menu button */}
           <button

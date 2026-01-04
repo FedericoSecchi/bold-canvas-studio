@@ -8,6 +8,7 @@ const Storytelling = () => {
     <section className="about-section min-h-[90vh] relative bg-background px-[6vw]">
       <div className="about-main-wrapper">
         <div className="about-main centered-text w-full max-w-[900px] mx-auto space-y-4">
+          <span className="label-text text-primary mb-4 block text-center">ABOUT</span>
           <h2 className="font-display font-extrabold leading-[0.95] tracking-[-0.02em]">
             {mainLine}
           </h2>
