@@ -18,10 +18,16 @@ const Storytelling = () => {
             id="about-intro-heading"
             className="font-display font-extrabold leading-[0.95] tracking-[-0.02em]"
             style={{
-              fontSize: "clamp(3.75rem, 10vw, 12rem)",
+              fontSize: "clamp(3.5rem, 10vw, 12rem)",
               lineHeight: "0.95",
-              maxWidth: "min(94vw, 90rem)",
-              marginInline: "auto",
+              width: "100vw",
+              maxWidth: "none",
+              margin: "0",
+              padding: "0",
+              marginLeft: "calc(50% - 50vw)",
+              marginRight: "calc(50% - 50vw)",
+              textAlign: "center",
+              boxSizing: "border-box",
             }}
           >
             {mainLine}
