@@ -8,7 +8,7 @@ const Storytelling = () => {
   return (
     <section
       id="about"
-      className="about-section min-h-[90vh] relative bg-background px-[6vw]"
+      className="about-section min-h-[90vh] relative bg-background px-[6vw] overflow-x-clip"
       aria-labelledby="about-intro-heading"
     >
       <div className="about-main-wrapper">
@@ -19,7 +19,7 @@ const Storytelling = () => {
           <span className="label-text text-primary mb-4 block text-center">ABOUT</span>
           <h2
             id="about-intro-heading"
-            className="font-display font-extrabold leading-[0.95] tracking-[-0.02em]"
+            className="font-display font-extrabold leading-[0.95] tracking-[-0.02em] block"
             style={{
               fontSize: "clamp(3.5rem, 10vw, 12rem)",
               lineHeight: "clamp(1.02, 0.92 + 0.3vw, 1.14)",
@@ -27,8 +27,9 @@ const Storytelling = () => {
               maxWidth: "none",
               margin: "0",
               padding: "0",
-              marginLeft: "calc(50% - 50vw)",
-              marginRight: "calc(50% - 50vw)",
+              position: "relative",
+              left: "50%",
+              transform: "translateX(-50%)",
               textAlign: "center",
               textWrap: "balance",
               hyphens: "auto",
