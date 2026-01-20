@@ -11,11 +11,11 @@ const Storytelling = () => {
       className="about-section min-h-[90vh] relative bg-background px-[6vw] overflow-x-clip"
       aria-labelledby="about-intro-heading"
     >
-      <div className="about-main-wrapper">
-        <div
-          className="about-main centered-text w-full max-w-none mx-auto"
-          style={{ marginBottom: "clamp(1.75rem, 3vw, 4.5rem)" }}
-        >
+      <div
+        className="about-main-wrapper grid"
+        style={{ rowGap: "clamp(1.75rem, 3vw, 4.5rem)" }}
+      >
+        <div className="about-main centered-text w-full max-w-none mx-auto">
           <span className="label-text text-primary mb-4 block text-center">ABOUT</span>
           <h2
             id="about-intro-heading"
@@ -40,10 +40,10 @@ const Storytelling = () => {
             {mainLine}
           </h2>
         </div>
-      </div>
 
-      <div className="about-note text-muted-foreground w-full mx-auto max-w-xl text-center">
-        {sideCopy}
+        <div className="about-note text-muted-foreground w-full mx-auto max-w-xl text-center">
+          {sideCopy}
+        </div>
       </div>
     </section>
   );
