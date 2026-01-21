@@ -8,13 +8,10 @@ const Storytelling = () => {
   return (
     <section
       id="about"
-      className="about-section min-h-[90vh] relative bg-background px-[6vw] overflow-x-clip"
+      className="about-section min-h-[90vh] relative bg-background overflow-x-clip"
       aria-labelledby="about-intro-heading"
     >
-      <div
-        className="about-main-wrapper grid"
-        style={{ rowGap: "clamp(1.75rem, 3vw, 4.5rem)" }}
-      >
+      <div className="about-main-wrapper grid">
         <div className="about-main centered-text w-full max-w-none mx-auto">
           <span className="label-text text-primary mb-4 block text-center">ABOUT</span>
           <div className="about-headline-clip overflow-hidden">
@@ -24,13 +21,10 @@ const Storytelling = () => {
               style={{
                 fontSize: "clamp(3.5rem, 10vw, 12rem)",
                 lineHeight: "clamp(1.02, 0.92 + 0.3vw, 1.14)",
-                width: "100vw",
-                maxWidth: "none",
+                width: "100%",
+                maxWidth: "100%",
                 margin: "0",
                 padding: "0",
-                position: "relative",
-                left: "50%",
-                transform: "translateX(-50%)",
                 textAlign: "center",
                 textWrap: "balance",
                 hyphens: "auto",
@@ -42,6 +36,11 @@ const Storytelling = () => {
             </h2>
           </div>
         </div>
+
+        <div
+          aria-hidden="true"
+          style={{ height: "clamp(2.5rem, 6vw, 6rem)" }}
+        />
 
         <div
           className="about-note text-muted-foreground w-full text-center"
