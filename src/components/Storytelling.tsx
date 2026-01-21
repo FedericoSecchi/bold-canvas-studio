@@ -15,45 +15,43 @@ const Storytelling = () => {
         className="about-main-wrapper grid"
         style={{ rowGap: "0" }}
       >
-        <div className="about-main w-full">
+        <div
+          className="about-main w-full"
+          style={{ position: "relative", isolation: "isolate" }}
+        >
           <span
             className="label-text text-primary mb-4 block text-center"
             style={{ paddingInline: "clamp(1.25rem, 6vw, 6rem)" }}
           >
             ABOUT
           </span>
-          <div className="about-headline-clip overflow-hidden">
-            <h2
-              id="about-intro-heading"
-              className="font-display font-extrabold tracking-[-0.02em] text-center"
-              style={{
-                fontSize: "clamp(3.5rem, 9vw, 11.5rem)",
-                lineHeight: "1.05",
-                width: "100%",
-                maxWidth: "100%",
-                margin: "0",
-                padding: "0",
-                textWrap: "balance",
-                hyphens: "auto",
-                overflowWrap: "break-word",
-                boxSizing: "border-box",
-              }}
-            >
-              {mainLine}
-            </h2>
+          <h2
+            id="about-intro-heading"
+            className="font-display font-extrabold tracking-[-0.02em] text-center"
+            style={{
+              fontSize: "clamp(3.5rem, 9vw, 11.5rem)",
+              lineHeight: "1.05",
+              width: "100%",
+              maxWidth: "100%",
+              margin: "0",
+              padding: "0",
+              textWrap: "balance",
+              hyphens: "auto",
+              overflowWrap: "break-word",
+              boxSizing: "border-box",
+            }}
+          >
+            {mainLine}
+          </h2>
+          <div
+            className="about-note text-muted-foreground w-full text-center"
+            style={{
+              paddingInline: "clamp(1.25rem, 6vw, 6rem)",
+              marginTop: "clamp(1.5rem, 3vw, 3rem)",
+            }}
+          >
+            {sideCopy}
           </div>
-        </div>
-
-        <div
-          aria-hidden="true"
-          style={{ height: "clamp(2.5rem, 6vw, 6rem)" }}
-        />
-
-        <div
-          className="about-note text-muted-foreground w-full text-center"
-          style={{ paddingInline: "clamp(1.25rem, 6vw, 6rem)" }}
-        >
-          {sideCopy}
         </div>
       </div>
     </section>

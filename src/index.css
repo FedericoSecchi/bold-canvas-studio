@@ -173,17 +173,14 @@ html {
   }
 
   .about-note {
-    position: absolute;
-    bottom: var(--note-offset-bottom);
-    right: var(--note-offset-right);
-    width: 20%;
-    max-width: 240px;
+    position: static;
+    width: 100%;
+    max-width: none;
     font-size: 18px;
     letter-spacing: 0.03em;
     line-height: 1.3;
     opacity: 0.85;
-    transform: translate(var(--about-note-offset-x, 0px), var(--about-note-offset-y, 0px));
-    text-align: left;
+    text-align: center;
   }
 
   .about-line {
@@ -221,9 +218,7 @@ html {
 
   @media (max-width: 1024px) {
     .about-note {
-      right: 32px;
-      bottom: 36px;
-      width: 26%;
+      width: 100%;
     }
   }
 
@@ -236,12 +231,8 @@ html {
     }
 
     .about-note {
-      position: static;
       width: 100%;
-      max-width: none;
       margin-top: 1.5rem;
-      right: auto;
-      bottom: auto;
     }
   }
 
