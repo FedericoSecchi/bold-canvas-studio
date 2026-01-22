@@ -1,0 +1,49 @@
+import { useEffect } from "react";
+import { useI18n } from "@/i18n/context";
+
+const SeoSchema = () => {
+  const { t, language } = useI18n();
+
+  useEffect(() => {
+    if (typeof document === "undefined" || typeof window === "undefined") {
+      return;
+    }
+
+    const siteUrl = window.location.origin;
+    const description = t("meta.homeDescription");
+    const name = t("brand.fullName");
+    const schema = [
+      {
+        "@context": "https://schema.org",
+        "@type": "Organization",
+        name,
+        description,
+        url: siteUrl,
+      },
+      {
+        "@context": "https://schema.org",
+        "@type": "WebSite",
+        name,
+        description,
+        url: siteUrl,
+        inLanguage: language,
+      },
+    ];
+
+    const existing = document.querySelector("script[data-schema='studio']");
+    if (existing) {
+      existing.textContent = JSON.stringify(schema);
+      return;
+    }
+
+    const script = document.createElement("script");
+    script.type = "application/ld+json";
+    script.setAttribute("data-schema", "studio");
+    script.textContent = JSON.stringify(schema);
+    document.head.appendChild(script);
+  }, [language, t]);
+
+  return null;
+};
+
+export default SeoSchema;

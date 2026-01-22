@@ -5,6 +5,7 @@ import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import { HashRouter, Routes, Route } from "react-router-dom";
 import { I18nProvider } from "@/i18n/context";
 import ScrollToTop from "@/components/ScrollToTop";
+import SeoSchema from "@/components/SeoSchema";
 import Index from "./pages/Index";
 import ProjectCase from "./pages/ProjectCase";
 import NotFound from "./pages/NotFound";
@@ -17,6 +18,7 @@ const App = () => (
       <TooltipProvider>
         <Toaster />
         <Sonner />
+        <SeoSchema />
         <HashRouter>
           <ScrollToTop />
           <Routes>

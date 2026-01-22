@@ -23,7 +23,9 @@ const ProjectCase = () => {
       document.title = t("meta.projectNotFoundTitle");
     }
     const description = project
-      ? t<string>(`projects.${project.id}.miniDescription`)
+      ? `${t("meta.projectDescriptionPrefix")} ${t<string>(
+          `projects.${project.id}.miniDescription`
+        )} ${t("meta.projectDescriptionSuffix")}`
       : t("meta.projectNotFoundDescription");
     const meta = document.querySelector('meta[name="description"]');
     if (meta) {
@@ -97,7 +99,9 @@ const ProjectCase = () => {
             <span className="label-text text-primary mb-4 block">
               {t(`projects.${project.id}.tag`)}
             </span>
-            <h1 className="headline-large mb-4">{t(`projects.${project.id}.title`)}</h1>
+            <h1 className="headline-large mb-4">
+              {t("caseStudy.h1Prefix")} {t(`projects.${project.id}.title`)}
+            </h1>
             <p className="body-large text-muted-foreground max-w-2xl">
               {t(`projects.${project.id}.miniDescription`)}
             </p>

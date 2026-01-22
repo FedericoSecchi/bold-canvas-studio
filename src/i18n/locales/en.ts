@@ -22,10 +22,9 @@ export const en = {
   },
   hero: {
     label: "STUDIO",
-    headline:
-      "We design brands, websites, and digital experiences that feel intentional.",
+    headline: "Design and development studio for branding and websites.",
     description:
-      "A creative studio focused on visual identity, modern websites, and digital content for teams that care about how they look, not just what they sell.",
+      "A creative studio for visual identity, modern websites, and digital content for teams that care about how they look and what they sell.",
     ctaStart: "Start a project",
     ctaWork: "See our work",
     badgeNew: "New",
@@ -157,6 +156,7 @@ export const en = {
     backToPortfolio: "Back to Portfolio",
     nextProject: "Next Project",
     viewAll: "View All Projects",
+    h1Prefix: "Case study:",
     task: "Task",
     idea: "Idea",
     solution: "Solution",
@@ -168,20 +168,25 @@ export const en = {
     detailAlt: "Detail",
   },
   notFound: {
-    title: "Oops! Page not found",
+    title: "Page not found",
     cta: "Return to Home",
   },
   meta: {
-    homeTitle: "Creative Studio — Branding, Websites & Experiences",
+    homeTitle: "Branding & Web Design Studio | Creative Studio Agency",
     homeDescription:
-      "We design brand identities and modern websites that clarify positioning and help teams sell with confidence.",
-    projectNotFoundTitle: "Project Not Found — Creative Studio",
+      "Design and development studio for branding and websites. We align strategy, identity, and execution so teams sell with clarity and confidence.",
+    projectNotFoundTitle:
+      "Project Not Found | Creative Studio Case Study Portfolio",
     projectNotFoundDescription:
-      "The project you're looking for doesn't exist or has been moved.",
-    projectDescriptionFallback: "A selected project from Creative Studio.",
-    projectTitleSuffix: "Creative Studio",
-    notFoundTitle: "Page Not Found — Creative Studio",
-    notFoundDescription: "The page you're looking for doesn't exist.",
+      "This project page is missing or has moved. Explore Creative Studio case studies to understand our process, context, and outcomes.",
+    projectDescriptionPrefix: "Case study covering context, approach, and outcome.",
+    projectDescriptionSuffix: "Read the full process and results.",
+    projectDescriptionFallback:
+      "Case study covering context, approach, and outcome. Read the full process and results.",
+    projectTitleSuffix: "Case Study | Creative Studio",
+    notFoundTitle: "Page Not Found | Creative Studio Design & Web Portfolio",
+    notFoundDescription:
+      "The page you're looking for doesn't exist. Visit the Creative Studio home or browse case studies for process, context, and results.",
   },
   brands: {
     "hotel-alpino": "Hotel Alpino",

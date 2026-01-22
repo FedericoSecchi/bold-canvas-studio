@@ -23,9 +23,9 @@ export const es = {
   hero: {
     label: "ESTUDIO",
     headline:
-      "Diseñamos marcas, sitios web y experiencias digitales con intención.",
+      "Estudio de diseño y desarrollo para marcas y sitios web.",
     description:
-      "Estudio creativo enfocado en identidad visual, sitios web modernos y contenido digital para equipos que cuidan cómo se ven, no solo lo que venden.",
+      "Identidad visual, sitios web modernos y contenido digital para equipos que cuidan su imagen y lo que venden.",
     ctaStart: "Iniciar un proyecto",
     ctaWork: "Ver nuestro trabajo",
     badgeNew: "Nuevo",
@@ -157,9 +157,10 @@ export const es = {
     backToPortfolio: "Volver al portfolio",
     nextProject: "Siguiente proyecto",
     viewAll: "Ver todos los proyectos",
-    task: "Tarea",
-    idea: "Idea",
-    solution: "Solución",
+    h1Prefix: "Caso de estudio:",
+    task: "Contexto",
+    idea: "Problema",
+    solution: "Resultado",
     notFoundTitle: "Proyecto no encontrado",
     notFoundDescription:
       "El proyecto que buscás no existe o fue movido.",
@@ -172,16 +173,20 @@ export const es = {
     cta: "Volver al inicio",
   },
   meta: {
-    homeTitle: "Creative Studio — Branding, sitios web y experiencias",
+    homeTitle: "Estudio de branding y diseño web | Creative Studio Agencia",
     homeDescription:
-      "Diseñamos identidades de marca y sitios web modernos que afinan el posicionamiento y ayudan a los equipos a vender con confianza.",
-    projectNotFoundTitle: "Proyecto no encontrado — Creative Studio",
+      "Estudio de diseño y desarrollo para marcas y sitios web. Alineamos estrategia, identidad y ejecución para vender con claridad.",
+    projectNotFoundTitle: "Proyecto no encontrado | Casos de Creative Studio",
     projectNotFoundDescription:
-      "El proyecto que buscás no existe o fue movido.",
-    projectDescriptionFallback: "Un proyecto seleccionado de Creative Studio.",
-    projectTitleSuffix: "Creative Studio",
-    notFoundTitle: "Página no encontrada — Creative Studio",
-    notFoundDescription: "La página que buscás no existe.",
+      "Ese proyecto no existe o se movió. Podés ver los casos de Creative Studio para conocer proceso, criterio y resultados.",
+    projectDescriptionPrefix: "Caso de estudio con contexto, enfoque y resultado.",
+    projectDescriptionSuffix: "Leé el proceso completo y el resultado.",
+    projectDescriptionFallback:
+      "Caso de estudio con contexto, enfoque y resultado. Leé el proceso completo y el resultado.",
+    projectTitleSuffix: "Caso de estudio | Creative Studio",
+    notFoundTitle: "Página no encontrada | Creative Studio Diseño y Web",
+    notFoundDescription:
+      "Esa página no existe. Volvé al inicio o revisá los casos para ver proceso, criterio y resultados.",
   },
   brands: {
     "hotel-alpino": "Hotel Alpino",
