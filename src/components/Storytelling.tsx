@@ -45,6 +45,7 @@ const Storytelling = () => {
             style={{
               paddingInline: "clamp(1.25rem, 6vw, 6rem)",
               marginTop: "clamp(1.5rem, 3vw, 3rem)",
+              marginBottom: "clamp(2rem, 4vw, 4rem)",
             }}
           >
             {t("about.note")}
