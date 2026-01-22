@@ -23,33 +23,33 @@ export const es = {
   hero: {
     label: "ESTUDIO",
     headline:
-      "Diseñamos marcas, sitios web y experiencias digitales que se sienten intencionales.",
+      "Diseñamos marcas, sitios web y experiencias digitales con intención.",
     description:
-      "Un estudio creativo enfocado en identidad visual, sitios web modernos y contenido digital para equipos que se preocupan por cómo se ven, no solo por lo que venden.",
+      "Estudio creativo enfocado en identidad visual, sitios web modernos y contenido digital para equipos que cuidan cómo se ven, no solo lo que venden.",
     ctaStart: "Iniciar un proyecto",
     ctaWork: "Ver nuestro trabajo",
     badgeNew: "Nuevo",
-    collageAlt1: "Espacio de trabajo creativo",
+    collageAlt1: "Estudio creativo en su espacio",
     collageAlt2: "Diseñador bocetando",
-    collageAlt3: "Diseño de sitio web",
+    collageAlt3: "Diseño web",
   },
   about: {
     label: "SOBRE",
     mainLine:
-      "Diseñamos identidades de marca y sitios web que clarifican el posicionamiento y ayudan a los equipos a vender con confianza.",
+      "Diseñamos identidades y sitios web que afinan el posicionamiento y ayudan a los equipos a vender con confianza.",
     note:
-      "Un estudio pequeño enfocado en estrategia clara, identidad sólida y ejecución práctica.",
+      "Un estudio pequeño centrado en estrategia clara, identidad sólida y ejecución práctica.",
   },
   process: {
     label: "PROCESO",
     title: "Hablar es fácil.",
     titleHighlight: "El trabajo claro no.",
     description:
-      "Mantenemos el proceso simple: un brief claro, ciclos de feedback honestos y tiempos realistas. Sin revisiones infinitas, sin desapariciones.",
-    clientsAppreciate: "Los clientes suelen apreciar que:",
+      "Mantenemos el proceso simple: brief claro, feedback honesto y plazos realistas. Sin rondas infinitas, sin desapariciones.",
+    clientsAppreciate: "Los clientes suelen valorar que:",
     bullets: [
       "Diseñamos con intención, no solo decoración.",
-      "Usamos motion e interacción solo cuando apoyan el mensaje.",
+      "Usamos motion e interacción solo cuando aportan al mensaje.",
       "Entregamos sistemas fáciles de mantener después del lanzamiento.",
     ],
     cta: "Menos drama, más entregas",
@@ -59,11 +59,11 @@ export const es = {
     title: "Hablar es fácil.",
     titleHighlight: "El trabajo claro no.",
     description:
-      "Mantenemos el proceso simple: un brief claro, ciclos de feedback honestos y tiempos realistas. Sin revisiones infinitas, sin desapariciones.",
-    clientsAppreciate: "Los clientes suelen apreciar que:",
+      "Mantenemos el proceso simple: brief claro, feedback honesto y plazos realistas. Sin rondas infinitas, sin desapariciones.",
+    clientsAppreciate: "Los clientes suelen valorar que:",
     bullets: [
       "Diseñamos con intención, no solo decoración.",
-      "Usamos motion e interacción solo cuando apoyan el mensaje.",
+      "Usamos motion e interacción solo cuando aportan al mensaje.",
       "Entregamos sistemas fáciles de mantener después del lanzamiento.",
     ],
     cta: "Menos drama, más entregas",
@@ -85,7 +85,7 @@ export const es = {
   work: {
     label: "TRABAJO",
     title: "Proyectos seleccionados",
-    subtitle: "Diferentes industrias. La misma obsesión por la claridad.",
+    subtitle: "Distintas industrias. La misma obsesión por la claridad.",
     collageTitle: "Momentos seleccionados",
     collageSubtitle: "de nuestro trabajo.",
     collageDescription: "Un vistazo a identidades, sitios web y mundos visuales.",
@@ -93,7 +93,7 @@ export const es = {
     collageOverlayTitle: "Visión de marca",
     collageAltProjectShowcase: "Proyecto destacado",
     collageAltDesignProcess: "Proceso de diseño",
-    collageAltWebsiteDesign: "Diseño de sitio web",
+    collageAltWebsiteDesign: "Diseño web",
     collageAltHotelBranding: "Branding para hotel",
   },
   capabilities: {
@@ -104,22 +104,22 @@ export const es = {
       {
         title: "Branding",
         text:
-          "Identidades visuales, refinamiento de logos, tipografía y sistemas de color, y guías de marca pensadas para uso real.",
+          "Identidades visuales, ajustes de logo, tipografía y sistemas de color, con guías pensadas para el uso real.",
       },
       {
         title: "Sitios web",
         text:
-          "Sitios modernos y responsivos con estructura clara, interacciones suaves y alto rendimiento.",
+          "Sitios modernos y responsivos con estructura clara, interacción suave y alto rendimiento.",
       },
       {
         title: "Contenido y motion",
         text:
-          "Layouts para redes, piezas de motion corto, visuales de producto y assets de campaña.",
+          "Layouts para redes, piezas cortas de motion, visuales de producto y assets de campaña.",
       },
       {
         title: "Sistemas y automatizaciones",
         text:
-          "Pequeñas automatizaciones para formularios, flujos de email y procesos simples que ahorran tiempo cada semana.",
+          "Automatizaciones simples para formularios, emails y flujos que ahorran tiempo cada semana.",
       },
     ],
   },
@@ -127,14 +127,14 @@ export const es = {
     label: "CLIENTES",
     title: "Marcas con las que trabajamos",
     description:
-      "Una selección de clientes, colaboradores y proyectos reales en los que participamos.",
+      "Selección de clientes, colaboradores y proyectos reales en los que participamos.",
   },
   contact: {
     label: "CONTACTO",
     title: "¿Cansado de",
     titleEnd: "jugar a lo seguro?",
     description:
-      "Contanos en qué estás trabajando y responderemos con un plan simple, tiempos y presupuesto.",
+      "Contanos en qué estás trabajando y respondemos con un plan simple, tiempos y presupuesto.",
     ctaWrite: "Escribinos",
     ctaBrief: "Iniciá tu brief",
     email: "hello@boldcanvas.studio",
@@ -144,7 +144,7 @@ export const es = {
     navigation: "Navegación",
     collaborate: "Colaborar",
     collaborateDescription:
-      "Diseñadores, desarrolladores, fotógrafos — envianos tu portfolio.",
+      "Diseñadores, desarrolladores y fotógrafos — envianos tu portfolio.",
     cta: "Ponete en contacto",
     copyright: "© 2025 Creative Studio. Todos los derechos reservados.",
     socials: {
@@ -168,7 +168,7 @@ export const es = {
     detailAlt: "Detalle",
   },
   notFound: {
-    title: "¡Ups! Página no encontrada",
+    title: "Página no encontrada",
     cta: "Volver al inicio",
   },
   meta: {
@@ -207,9 +207,9 @@ export const es = {
       miniDescription:
         "Refresh de marca para una panadería artesanal con foco en storytelling visual.",
       task:
-        "Modernizar la marca manteniendo su carácter artesanal y auténtico, y hacerla más atractiva para un público más joven.",
+        "Modernizar la marca manteniendo su carácter artesanal y auténtico, y volverla más atractiva para un público más joven.",
       idea:
-        "Crear un sistema visual cálido y cercano que celebre la artesanía y los ingredientes de calidad, con elementos dibujados a mano y fotografía rica.",
+        "Crear un sistema visual cálido y cercano que celebre la artesanía y los ingredientes de calidad, con elementos dibujados a mano y fotografía con carácter.",
       solution:
         "Rediseñamos la identidad con nueva paleta, tipografías personalizadas y un lenguaje visual que cuenta la historia de la panificación tradicional con un enfoque moderno.",
     },
