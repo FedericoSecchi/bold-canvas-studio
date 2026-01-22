@@ -125,7 +125,8 @@ html {
   }
 
   .label-text {
-    @apply font-body text-xs uppercase tracking-[0.2em] font-medium;
+    @apply font-body uppercase tracking-[0.2em] font-medium;
+    font-size: calc(0.75rem * 2);
   }
 
   /* Collage card styles */
