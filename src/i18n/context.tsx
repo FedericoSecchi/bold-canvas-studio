@@ -41,10 +41,15 @@ export const I18nProvider = ({ children, defaultLanguage = 'en' }: I18nProviderP
     }
 
     // If no saved preference, auto-detect from browser locale
-    const browserLang = navigator.language || navigator.languages?.[0] || '';
-    
+    const preferredLanguages = navigator.languages?.length
+      ? navigator.languages
+      : [navigator.language].filter(Boolean);
+
     // Check if browser language starts with 'es' (covers es, es-AR, es-MX, etc.)
-    if (browserLang.toLowerCase().startsWith('es')) {
+    const hasSpanish = preferredLanguages.some((lang) =>
+      lang.toLowerCase().startsWith('es')
+    );
+    if (hasSpanish) {
       return 'es';
     }
 
