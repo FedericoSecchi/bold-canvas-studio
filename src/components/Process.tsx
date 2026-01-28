@@ -5,13 +5,17 @@ const Process = () => {
   const { t } = useI18n();
   const bullets = t<string[]>("process.bullets");
   return (
-    <section id="process" className="py-32 bg-muted">
+    <section
+      id="process"
+      className="py-32 bg-muted border-t border-border/30"
+      aria-labelledby="process-heading"
+    >
       <div className="section-container">
         <div className="grid lg:grid-cols-2 gap-16 items-center">
           {/* Left: Main statement */}
           <div data-animate="fade-up">
             <span className="label-text text-primary mb-4 block">{t("process.label")}</span>
-            <h2 className="headline-medium mb-8">
+            <h2 id="process-heading" className="headline-medium mb-8">
               {t("process.title")}
               <br />
               <span className="text-stroke">{t("process.titleHighlight")}</span>
