@@ -16,6 +16,14 @@ import { useI18n } from "@/i18n/context";
 const Index = () => {
   const { t, language } = useI18n();
   useScrollAnimations();
+  const ServicesWithEvidence = () => (
+    <>
+      {/* Services evidence (Work) stays visually identical for now */}
+      <CollageShowcase />
+      <Portfolio />
+      <Capabilities />
+    </>
+  );
 
   useEffect(() => {
     // Update page title
@@ -40,9 +48,7 @@ const Index = () => {
         <Storytelling />
         <Process />
         <Marquee />
-        <CollageShowcase />
-        <Portfolio />
-        <Capabilities />
+        <ServicesWithEvidence />
         <Clients />
         <ContactCTA />
       </main>
