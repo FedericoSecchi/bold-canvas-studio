@@ -9,7 +9,7 @@ const Capabilities = () => {
   const icons = ["✦", "◈", "◎", "⬡"];
 
   return (
-    <section id="capabilities" className="py-32 bg-background">
+    <section id="capabilities" className="py-32 bg-secondary text-secondary-foreground">
       <div className="section-container">
         <div className="mb-20" data-animate="fade-up">
           <span className="label-text text-primary mb-4 block">{t("capabilities.label")}</span>
