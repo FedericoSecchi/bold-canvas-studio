@@ -4,7 +4,6 @@ import Hero from "@/components/Hero";
 import Storytelling from "@/components/Storytelling";
 import Process from "@/components/Process";
 import Marquee from "@/components/Marquee";
-import CollageShowcase from "@/components/CollageShowcase";
 import Portfolio from "@/components/Portfolio";
 import Capabilities from "@/components/Capabilities";
 import Clients from "@/components/Clients";
@@ -16,15 +15,6 @@ import { useI18n } from "@/i18n/context";
 const Index = () => {
   const { t, language } = useI18n();
   useScrollAnimations();
-  const ServicesWithEvidence = () => (
-    <>
-      {/* Services evidence (Work) stays visually identical for now */}
-      <CollageShowcase />
-      <Portfolio />
-      <Capabilities />
-    </>
-  );
-
   useEffect(() => {
     // Update page title
     document.title = t("meta.homeTitle");
@@ -48,7 +38,8 @@ const Index = () => {
         <Storytelling />
         <Process />
         <Marquee />
-        <ServicesWithEvidence />
+        <Capabilities />
+        <Portfolio />
         <Clients />
         <ContactCTA />
       </main>
